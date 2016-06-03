@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>上移下移demo</title>
+		<link rel="stylesheet" href="css/demo.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.js" ></script>
+		<script type="text/javascript" src="js/move.js" ></script>
+		<script type="text/javascript">
+			function callback(){//上移下移的回调函数
+				return true;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="top_title">演示上移下移demo</div>
+		<table>
+			<tr>
+				<td>序号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>张三</td>
+				<td>23</td>
+				<td>
+					<a href="javascript:void(0)" class="moveDown" onclick="moveToDown(jQuery(this).parent().parent(),callback())">下移</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>2</td>
+				<td>李四</td>
+				<td>24</td>
+				<td>
+					<a href="javascript:void(0)" class="moveUp" onclick="moveToUp(jQuery(this).parent().parent(),callback())">上移</a><a href="javascript:void(0)" class="moveDown" onclick="moveToDown(jQuery(this).parent().parent(),callback())">下移</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>王五</td>
+				<td>25</td>
+				<td>
+					<a href="javascript:void(0)" class="moveUp" onclick="moveToUp(jQuery(this).parent().parent(),callback())">上移</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
